@@ -1,26 +1,117 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --page-background: #f7fafc;
+  --foreground: #0f172a;
+  --sticky-offset: 10rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--sticky-offset);
 }
 
 body {
-  background: var(--background);
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.14), transparent 24rem),
+    linear-gradient(180deg, #fffaf5 0%, #f7fafc 20%, #f4f8fb 100%);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), sans-serif;
+}
+
+@layer base {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --sticky-offset: 7rem;
+  }
+}
+
+@keyframes hero-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes hero-float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes hero-float-slow {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-14px) rotate(-1deg);
+  }
+}
+
+.hero-enter,
+.step-enter {
+  opacity: 0;
+  animation: hero-reveal 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-float {
+  animation: hero-float 6s ease-in-out infinite;
+}
+
+.hero-float-slow {
+  animation: hero-float-slow 7.2s ease-in-out infinite;
+}
+
+.shine-sweep {
+  transform: translateX(-160%);
+}
+
+.group:hover .shine-sweep {
+  transform: translateX(320%);
+  transition: transform 0.95s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-enter,
+  .step-enter,
+  .hero-float,
+  .hero-float-slow {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .shine-sweep,
+  .group:hover .shine-sweep {
+    transform: none;
+    transition: none;
+  }
 }
