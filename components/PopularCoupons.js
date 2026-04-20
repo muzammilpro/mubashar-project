@@ -72,7 +72,7 @@ export default function PopularCoupons() {
 
         <Link
           href="#popular-coupons"
-          className="hero-enter group inline-flex items-center gap-2 self-start rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-700 shadow-[0_12px_30px_rgba(15,23,42,0.06)] transition duration-300 hover:-translate-y-1 hover:border-sky-200 hover:text-sky-600 sm:self-auto"
+          className="hero-enter group inline-flex w-full items-center justify-center gap-2 self-start rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-700 shadow-[0_12px_30px_rgba(15,23,42,0.06)] transition duration-300 hover:-translate-y-1 hover:border-sky-200 hover:text-sky-600 sm:w-auto sm:justify-start sm:self-auto"
           style={{ animationDelay: "200ms" }}
         >
           See All Coupons
@@ -105,7 +105,7 @@ export default function PopularCoupons() {
             >
               <div className="pointer-events-none absolute inset-x-6 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(14,165,233,0.3),transparent)]" />
 
-              <div className="grid gap-0 lg:grid-cols-[16rem_minmax(0,1fr)_14rem]">
+              <div className="grid gap-0 xl:grid-cols-[16rem_minmax(0,1fr)_14rem]">
                 <div className="p-4 sm:p-5">
                   <div
                     className={`relative flex min-h-[9rem] items-center justify-center overflow-hidden rounded-[1.6rem] px-5 py-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] sm:min-h-[11rem] sm:px-6 sm:py-8 ${coupon.theme}`}
@@ -117,7 +117,7 @@ export default function PopularCoupons() {
                   </div>
                 </div>
 
-                <div className="border-slate-100 px-4 pb-5 sm:px-5 lg:border-l lg:border-r lg:py-5">
+                <div className="border-slate-100 px-4 pb-5 sm:px-5 xl:border-l xl:border-r xl:py-5">
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="inline-flex items-center rounded-full bg-sky-50 px-3 py-1 text-xs font-semibold text-sky-600 ring-1 ring-sky-100">
                       Exclusive
@@ -147,7 +147,7 @@ export default function PopularCoupons() {
                   </div>
                 </div>
 
-                <div className="flex flex-col justify-center gap-4 border-t border-slate-100 p-4 sm:p-5 lg:border-t-0">
+                <div className="flex flex-col justify-center gap-4 border-t border-slate-100 p-4 sm:p-5 xl:border-t-0">
                   <div className="rounded-[1.5rem] bg-slate-50 px-4 py-4 ring-1 ring-slate-100">
                     <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
                       Limited Offer
@@ -274,7 +274,7 @@ function MicrosoftLogo() {
         <span className="h-6 w-6 bg-[#05a6f0]" />
         <span className="h-6 w-6 bg-[#ffba08]" />
       </div>
-      <span className="text-[2.1rem] font-semibold tracking-[-0.04em]">
+      <span className="text-[1.6rem] font-semibold tracking-[-0.04em] sm:text-[2.1rem]">
         Microsoft
       </span>
     </div>
@@ -284,7 +284,7 @@ function MicrosoftLogo() {
 function PhilipsLogo() {
   return (
     <div className="text-center">
-      <div className="text-[3rem] font-black uppercase tracking-[0.06em] text-white">
+      <div className="text-[2.2rem] font-black uppercase tracking-[0.06em] text-white sm:text-[3rem]">
         PHILIPS
       </div>
       <div className="mt-2 text-sm font-medium uppercase tracking-[0.3em] text-white/70">
@@ -297,7 +297,7 @@ function PhilipsLogo() {
 function SiemensLogo() {
   return (
     <div className="text-center">
-      <div className="text-[2.8rem] font-black uppercase tracking-[0.08em] text-white">
+      <div className="text-[2.1rem] font-black uppercase tracking-[0.08em] text-white sm:text-[2.8rem]">
         SIEMENS
       </div>
       <div className="mt-2 text-sm font-medium uppercase tracking-[0.3em] text-white/70">

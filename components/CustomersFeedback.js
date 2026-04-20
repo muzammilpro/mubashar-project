@@ -56,7 +56,7 @@ export default function CustomersFeedback() {
       </div>
 
       <div className="relative">
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {feedbackItems.map((item, index) => (
             <article
               key={item.name}
@@ -100,12 +100,12 @@ export default function CustomersFeedback() {
           ))}
         </div>
 
-        <div className="mt-5 flex items-center justify-center gap-3 lg:hidden">
+        <div className="mt-5 flex items-center justify-center gap-3 xl:hidden">
           <ArrowButton direction="left" />
           <ArrowButton direction="right" primary />
         </div>
 
-        <div className="pointer-events-none absolute inset-x-3 inset-y-1/2 hidden -translate-y-1/2 lg:block">
+        <div className="pointer-events-none absolute inset-x-3 inset-y-1/2 hidden -translate-y-1/2 xl:block">
           <div className="relative flex items-center justify-between">
             <div className="pointer-events-auto">
               <ArrowButton direction="left" />

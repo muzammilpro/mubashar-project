@@ -83,7 +83,7 @@ export default function TopStores() {
 
           <Link
             href="#top-stores"
-            className="hero-enter group inline-flex items-center gap-2 self-start rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-700 shadow-[0_12px_30px_rgba(15,23,42,0.06)] transition duration-300 hover:-translate-y-1 hover:border-sky-200 hover:text-sky-600 sm:self-auto"
+            className="hero-enter group inline-flex w-full items-center justify-center gap-2 self-start rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-700 shadow-[0_12px_30px_rgba(15,23,42,0.06)] transition duration-300 hover:-translate-y-1 hover:border-sky-200 hover:text-sky-600 sm:w-auto sm:justify-start sm:self-auto"
             style={{ animationDelay: "200ms" }}
           >
             See All Stores
